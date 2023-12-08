@@ -124,9 +124,9 @@ export default function Video() {
         const fetchVideo = async () => {
             dispatch(fetchStart())
             try {
-                const videoRes = await axios.get(`/videos/find/${path}`)
+                const videoRes = await axios.get(`https://extinct-ox-getup.cyclic.app//api//videos/find/${path}`)
                 // console.log(videoRes.data, "===> video res")
-                const channel = await axios.get(`/users/find/${videoRes?.data?.userId}`)
+                const channel = await axios.get(`https://extinct-ox-getup.cyclic.app//api//users/find/${videoRes?.data?.userId}`)
                 // console.log(channel.data, "===> channel res")
                 setChannel(channel?.data)
                 dispatch(fetchSuccess(videoRes?.data))
