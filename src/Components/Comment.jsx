@@ -38,7 +38,7 @@ export default function Comment({ comment }) {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const res = await axios.get(`/users/find/${comment?.userId}`)
+            const res = await axios.get(`https://extinct-ox-getup.cyclic.app/api/users/find/${comment?.userId}`)
             // console.log(res?.data)
             setChannel(res?.data)
         }

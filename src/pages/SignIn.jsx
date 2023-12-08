@@ -74,7 +74,7 @@ export default function SignIn() {
         } else {
             dispatch(loginStart());
             try {
-                const res = await axios.post(`/auth/signIn`, { name, password })
+                const res = await axios.post(`https://extinct-ox-getup.cyclic.app/api/auth/signIn`, { name, password })
                 // console.log(res.data, "==> sign in api hit");
                 dispatch(loginSuccess(res.data))
                 navigate('/')

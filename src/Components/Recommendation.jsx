@@ -14,7 +14,7 @@ export default function Recommendation({ tags }) {
 
     useEffect(() => {
         const fetchVideosByTags = async () => {
-            const res = await axios.get(`/videos/tags?tags=${tags}`);
+            const res = await axios.get(`https://extinct-ox-getup.cyclic.app/api/videos/tags?tags=${tags}`);
             setVideos(res?.data)
         }
         fetchVideosByTags();

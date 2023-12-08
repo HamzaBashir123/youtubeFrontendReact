@@ -16,7 +16,7 @@ export default function Home({ type }) {
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const res = await axios.get(`https://extinct-ox-getup.cyclic.app//api//videos/${type}`);
+      const res = await axios.get(`https://extinct-ox-getup.cyclic.app/api/videos/${type}`);
     //   console.log(res.data, "==> data from api");
       setVideos(res.data);
     };

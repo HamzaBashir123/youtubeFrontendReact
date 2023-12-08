@@ -39,7 +39,7 @@ export default function Comments({ videoId }) {
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                const res = await axios.get(`/comment/${videoId}`)
+                const res = await axios.get(`https://extinct-ox-getup.cyclic.app/api/comment/${videoId}`)
                 
                 setComment(res.data)
             } catch (error) {

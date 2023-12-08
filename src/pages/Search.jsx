@@ -19,7 +19,7 @@ export default function Search() {
 
     useEffect(() => {
         const fetchSearchVideos = async () => {
-            const res = await axios.get(`/videos/search${query}`)
+            const res = await axios.get(`https://extinct-ox-getup.cyclic.app/api/videos/search${query}`)
             setSearchVideos(res?.data)
         }
         fetchSearchVideos()
